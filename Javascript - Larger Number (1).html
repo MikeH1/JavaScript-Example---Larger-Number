@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Larger number calculator</title>
+	
+	<script type="text/javascript">
+		function calculate() {
+		var myValueOne = parseInt(document.getElementById('valueOne').value, 10);
+		var myValueTwo = parseInt(document.getElementById('valueTwo').value, 10);
+		
+			if (myValueOne > myValueTwo) {
+				document.getElementById("result").innerHTML = myValueOne + ' is the larger number ';
+			} else if (myValueOne < myValueTwo) {
+				document.getElementById("result").innerHTML = myValueTwo + ' is the larger number ';
+			} else {
+				document.getElementById("result").innerHTML = 'The numbers are equal';
+			}
+
+		}
+	</script>
+	
+</head>
+<body>
+
+	<h1> Enter two values </h1>
+	
+	<input type="number" id="valueOne" />
+	<input type="number" id="valueTwo" />
+	<input type="submit" value="Enter" onclick="calculate()" />
+	<p id="result"></p>
+	
+</body>
+</html>
